@@ -16,7 +16,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.example.katerynakravchenko.fasebook.FacebookRecipesApp;
 import com.example.katerynakravchenko.fasebook.R;
-import com.example.katerynakravchenko.fasebook.RecipeListActivity;
+import com.example.katerynakravchenko.fasebook.recipelist.ui.RecipeListActivity;
 import com.example.katerynakravchenko.fasebook.entities.Recipe;
 import com.example.katerynakravchenko.fasebook.libs.base.ImageLoader;
 import com.example.katerynakravchenko.fasebook.recipemain.RecipeMainPresenter;
@@ -109,7 +109,7 @@ public class RecipeMainActivity extends AppCompatActivity implements RecipeMainV
 
         private void setupInjection() {
             FacebookRecipesApp app = (FacebookRecipesApp)getApplication();
-            component= app.getRecipeListComponent(this,this);
+            component= app.getRecipeMainComponent(this,this);
             imageLoader = getImageLoader();
             presenter = getPresenter();
         }
